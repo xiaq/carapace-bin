@@ -14,11 +14,11 @@ var doctorCmd = &cobra.Command{
 func init() {
 	carapace.Gen(doctorCmd).Standalone()
 
-	doctorCmd.Flags().BoolP("audit-debug", "D", false, "Enable debugging and profiling of audit methods.")
-	doctorCmd.Flags().BoolP("debug", "d", false, "Display any debugging information.")
-	doctorCmd.Flags().BoolP("help", "h", false, "Show this message.")
-	doctorCmd.Flags().Bool("list-checks", false, "List all audit methods")
-	doctorCmd.Flags().BoolP("quiet", "q", false, "Make some output more quiet.")
-	doctorCmd.Flags().BoolP("verbose", "v", false, "Make some output more verbose.")
+	doctorCmd.Flags().BoolP("audit-debug", "D", false, "Enable debugging and profiling of audit methods")
+	doctorCmd.Flags().BoolP("debug", "d", false, "Display any debugging information")
+	doctorCmd.Flags().BoolP("help", "h", false, "Show this message")
+	doctorCmd.Flags().Bool("list-checks", false, "List all audit methods, which can be run individually if provided as arguments")
+	doctorCmd.Flags().BoolP("quiet", "q", false, "Make some output more quiet")
+	doctorCmd.Flags().BoolP("verbose", "v", false, "Make some output more verbose")
 	rootCmd.AddCommand(doctorCmd)
 }
